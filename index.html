@@ -26,13 +26,15 @@
 	}
 	
 	.locate
-{	display:flex;
-	justify-content:center;}	
+{	
+  margin: auto;
+	position: relative}	
  .btn:hover {
     border-radius: 3px;
     background-color: #fee6d1;
     color: #3e4152;
 }
+
 .content{
     min-height: 600px;
 }
@@ -42,7 +44,7 @@
     margin-bottom: 20px;
     font-family: "Karma", sans-serif;
     color: #f8f8f8;
-   background-image: url(https://image.freepik.com/free-photo/raw-pasta-with-tomatoes-and-cheese-on-a-black-table-making-a-circle_1309-53.jpg);;
+   background-image: url(https://image.freepik.com/free-photo/raw-pasta-with-tomatoes-and-cheese-on-a-black-table-making-a-circle_1309-53.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
@@ -72,7 +74,10 @@
 
 </style>
   <script src="js/script.js" type="text/javascript" charset="utf-8">
-    
+    function navigate()
+    {
+      location.href = 'order.php';
+    }
    
   </script>
 </head>
@@ -103,9 +108,19 @@
     </nav>
     </header>
     <!--header ends-->
-	<button type="button" class="btn btn-default">
-      <div class="locate"><span class="glyphicon glyphicon-search"></span>Locate me</div>
-    </button>
+    <div class="container-fluid" align="center">
+      <button class="locate btn btn-primary" onclick="navigate()"><span class="glyphicon glyphicon-search"></span>Locate me
+        <script type="text/javascript" charset="utf-8">
+    function navigate()
+    {
+      location.href = 'order1.html';
+    }
+   
+  </script>
+      </button>
+    </div>
+    
+
      <div class="content">
     <!--Main banner image-->
     <div class="banner_image">
