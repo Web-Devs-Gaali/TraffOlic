@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--google sign-in-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <!--Custom style sheet-->
@@ -23,23 +25,10 @@
     background-color: #f4b41d;
 	}
 	
-	.locate-me {
-   display:flex;
-   justify-content:center;
-    
-    background: #fff;
-   
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 5px 8px; 
-    background-repeat: no-repeat;
-    height: 40px;
-    padding: 5px 5px 5px;
-    margin: 0px 625px 0px ;
-   font-family:fantasy;
-    font-size: 14px;
-}
- .locate-me:hover {
+	.locate
+{	display:flex;
+	justify-content:center;}	
+ .btn:hover {
     border-radius: 3px;
     background-color: #fee6d1;
     color: #3e4152;
@@ -51,23 +40,25 @@
 .banner_image {
     padding-bottom: 50px;
     margin-bottom: 20px;
-    
+    font-family: "Karma", sans-serif;
     color: #f8f8f8;
-   background-image: url(https://image.freepik.com/free-photo/vegetables-set-to-the-left-of-a-black-slate_1220-685.jpg);;
+   background-image: url(https://image.freepik.com/free-photo/raw-pasta-with-tomatoes-and-cheese-on-a-black-table-making-a-circle_1309-53.jpg);;
+    background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 4px 10px blue;
+    background-attachment: scroll;
+    text-shadow: 2px 4px 5px red;
 }
 
 .inner-banner-image{
     padding-top: 12%;
-    width:60%;
+    width:30%;
     margin:auto;
 }
 
 .banner_content {
    
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 20%;
+    padding-bottom: 10%;
     overflow:hidden;
     margin-bottom: 12%;
     background-color: rgba(0, 0, 0, 0);
@@ -76,7 +67,10 @@
 }
 .eatnow
 {	text-decoration:none;}
-  </style>
+
+
+
+</style>
   <script src="js/script.js" type="text/javascript" charset="utf-8">
     
    
@@ -91,7 +85,7 @@
           		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> 	<span class="icon-bar"></span> <span class="icon-bar"></span> 
           </button>
           <a class="navbar-branch" href="">
-            <img src="logo.png" class="img-rounded" id="logo" alt="logo" height="60px" width="150px">
+            <img src="logo.png" class="img-rounded" id="logo" alt="logo" height="60px" width="170px">
          <!--   <h3 style="display:inline-block; text-decoration: none;" align="center" >traff-O-lic</h1> -->
           </a>
         </div>
@@ -109,10 +103,9 @@
     </nav>
     </header>
     <!--header ends-->
-	<div class="locate-me" >
-                
-                <span class="locate-me-text">Locate Me</span>
-    </div>
+	<button type="button" class="btn btn-default">
+      <div class="locate"><span class="glyphicon glyphicon-search"></span>Locate me</div>
+    </button>
      <div class="content">
     <!--Main banner image-->
     <div class="banner_image">
@@ -122,9 +115,58 @@
             <h1>Food on the go</h1>
           
             <br/>
-            <a href="#" class="eatnow"><h2>EAT Now</h2></a>
+            <a href="#food" class="button"><h2>Order Now</h2></a>
           </div>
         
       </div>
     </div>
+  
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+   <div class="w3-quarter">
+      <img src="sandwich.jpg" alt="Sandwich" style="width:100%">
+    	 <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+     
+    </div>
+    <div class="w3-quarter">
+      <img src="rolls.jpg" alt="rolls" style="width:70%">
+      <h3>Let Me Tell You About This Rolls</h3>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="sub.jpg" alt="subway" style="width:110%">
+      <h3>Satisfy your hunger with a footlong</h3>
     
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="biscuits.jpg" alt="biscuits" style="width:80%">
+      <h3>Anytime is biscuits time</h3>
+     
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="water.png" alt="water" style="width:100%">
+      <h3>All u Need </h3>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="juice.jpg" alt="juice" style="width:105%">
+      <h3>Fruit-juices</h3>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="fruits.jpg" alt="fruits" style="width:90%">
+      <h3>Cut-fruits</h3>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="salad.jpg" alt="salad" style="width:100%">
+      <h3>Salads</h3>
+      
+    </div>
+  </div>
