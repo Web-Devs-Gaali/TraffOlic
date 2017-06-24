@@ -1,0 +1,12 @@
+{
+  "location": {
+    "lat":17.426167, "lng":78.340950
+  },
+  "accuracy": 50,
+  "name": "traff-O-lic stall",
+  "phone_number": "+91 7032093869",
+  "address": "Wipro circle, Financial District, Nanakram Guda, Hyderabad, Telanagana 500032, India",
+  "types": ["taffolic_store"],
+  "language": "en-IN"
+}
+      

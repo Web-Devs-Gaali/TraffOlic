@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <style type="text/css" media="screen">
+        #myMap
+        {
+            height: 90%;
+            width: 100%
+        }   
+        html,body
+        {
+            height: 100%;
+        }
+    </style>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type='text/javascript' 
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' 
+            async defer></script>
+    <script type='text/javascript'>
+    var map, watchId, userPin,loc;
+
+    // URL to the data source that powers the locator. 
+    var dataSourceUrl = 'https://spatial.virtualearth.net/REST/v1/data/515d38d4d4e348d9a61c615f59704174/CoffeeShops/CoffeeShop'; 
+ 
+    // A setting for specifying the distance units displayed. Possible values are 'km' and 'mi'. 
+    var distanceUnits = 'km'; 
+
+    function GetMap()
+    {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'Aq1oJgTquQcxx0RjsrTa9y8ovWyKWL3wFToBfY-g0JUfYEs_2m1TRcqCQ5psocb5'
+        });
+        //Request the user's location
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var loc = new Microsoft.Maps.Location(
+                position.coords.latitude,
+                position.coords.longitude);
+
+            //Add a pushpin at the user's location.
+            var pin = new Microsoft.Maps.Pushpin(loc);
+            map.entities.push(pin);
+
+            //Center the map on the user's location.
+            map.setView({ center: loc, zoom: 17 });
+        });
+        // api to add tilelayer on map 
+    
+        Microsoft.Maps.loadModule('Microsoft.Maps.Traffic', { callback: trafficModuleLoaded }); 
+
+        StartTracking();
+    }
+
+    function trafficModuleLoaded()  
+    { 
+        //set center  
+        map.setView({ center: new Microsoft.Maps.Location(40.71, -74.00), zoom:17}); 
+        var trafficManager = new Microsoft.Maps.Traffic.TrafficManager(map); 
+        // show all traffic data 
+        trafficManager.show();
+        trafficManager.showFlow();
+        trafficManager.showIncidents();
+        trafficManager.showLegend();
+        trafficManager.setOptions({flowVisible:true,legendVisible:true,incidentsVisible:true}); 
+    } 
+
+    function StartTracking() {
+        //Add a pushpin to show the user's location.
+        userPin = new Microsoft.Maps.Pushpin(map.getCenter(), { visible: false });
+        map.entities.push(userPin);
+
+        //Watch the users location.
+        watchId = navigator.geolocation.watchPosition(UsersLocationUpdated);
+    }
+
+    function UsersLocationUpdated(position) {
+        loc = new Microsoft.Maps.Location(
+                    position.coords.latitude,
+                    position.coords.longitude);
+
+        //Update the user pushpin.
+        userPin.setLocation(loc);
+        userPin.setOptions({ visible: true });
+
+        //Center the map on the user's location.
+        map.setView({ center: loc });
+    }
+
+    function StopTracking() {
+        // Cancel the geolocation updates.
+        navigator.geolocation.clearWatch(watchId);
+
+        //Remove the user pushpin.
+        map.entities.clear();
+    }
+    </script>
+</head>
+<body>
+    <div class="container-fluid" id="myMap"></div><br/>
+    <input type="button" value="Stop Continuous Tracking" onclick="StopTracking()"/>
+</body>
+</html>
