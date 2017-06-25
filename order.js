@@ -12,6 +12,7 @@
     function GetMap()
     {
         var stall = new Microsoft.Maps.Location(17.426083, 78.340969);
+        var stall1 = new Microsoft.Maps.Location(17.426768, 78.415439);
 
         map = new Microsoft.Maps.Map('#myMap', {
             credentials: 'Aq1oJgTquQcxx0RjsrTa9y8ovWyKWL3wFToBfY-g0JUfYEs_2m1TRcqCQ5psocb5'
@@ -22,10 +23,10 @@
                 position.coords.latitude,
                 position.coords.longitude);
 
-            //Add a pushpin at the user's location.
+            /*//Add a pushpin at the user's location.
             var pin = new Microsoft.Maps.Pushpin(loc,{color : 'green', text:'A' ,title: 'Your Location'});
             map.entities.push(pin);
-
+*/
             //Center the map on the user's location.
             map.setView({ center: loc, zoom: 17 });
         });
@@ -46,7 +47,7 @@
         });
         map.entities.push(pushpin);
         pushpin.setOptions({ enableHoverStyle: true, enableClickedStyle: true });
-        var infoboxTemplate = '<div id="infoboxText" style="background-color:White; border-style:solid; border-width:medium; border-color:DarkOrange; min-height:100px; width: 240px; "><b id="infoboxTitle" style="position: absolute; top: 10px; left: 10px; width: 220px; ">{title}</b><b id="infoboxDescription" style="position: absolute; top: 30px; left: 10px; width: 220px; ">{description}</b><a id="infoboxDescription" style="text-align:center; position: absolute; top: 45px; width: 220px; " href="cart.html" >{handler}</a></div>';
+        var infoboxTemplate = '<div id="infoboxText" style="background-color:White; border-style:solid; border-width:medium; border-color:DarkOrange; min-height:100px; width: 240px; "><b id="infoboxTitle" style="position: absolute; top: 10px; left: 10px; width: 220px; ">{title}</b><b id="infoboxDescription" style="position: absolute; top: 30px; left: 10px; width: 220px; ">{description}</b><a id="infoboxDescription" style="text-align:center; position: absolute; top: 45px; width: 220px; " href="menu.html" >{handler}</a></div>';
         var infobox = new Microsoft.Maps.Infobox(stall, {htmlContent:infoboxTemplate.replace('{title}', 'traff-O-lic').replace('{description}', 'check-out zone').replace('{handler}', 'Buy now'), 
             actions: [{ label: 'Buy now', eventHandler: function () {
                 location.href = 'menu.html';
@@ -55,6 +56,25 @@
         ] ,visible: false});
         infobox.setMap(map);
         Microsoft.Maps.Events.addHandler(pushpin, 'click', function () {
+        infobox.setOptions({ visible: true });
+        });
+
+        var pushpin1 = new Microsoft.Maps.Pushpin(stall1,{color : 'red',text:'B' , title: 'Stall Location',action: { label: 'Buy now', eventHandler: function () 
+            {
+                alert('Handler1');
+            }}
+        });
+        map.entities.push(pushpin1);
+        pushpin1.setOptions({ enableHoverStyle: true, enableClickedStyle: true });
+        var infoboxTemplate = '<div id="infoboxText" style="background-color:White; border-style:solid; border-width:medium; border-color:DarkOrange; min-height:100px; width: 240px; "><b id="infoboxTitle" style="position: absolute; top: 10px; left: 10px; width: 220px; ">{title}</b><b id="infoboxDescription" style="position: absolute; top: 30px; left: 10px; width: 220px; ">{description}</b><a id="infoboxDescription" style="text-align:center; position: absolute; top: 45px; width: 220px; " href="menu.html" >{handler}</a></div>';
+        var infobox = new Microsoft.Maps.Infobox(stall1, {htmlContent:infoboxTemplate.replace('{title}', 'traff-O-lic').replace('{description}', 'check-out zone').replace('{handler}', 'Buy now'), 
+            actions: [{ label: 'Buy now', eventHandler: function () {
+                location.href = 'menu.html';
+            }
+        }
+        ] ,visible: false});
+        infobox.setMap(map);
+        Microsoft.Maps.Events.addHandler(pushpin1, 'click', function () {
         infobox.setOptions({ visible: true });
         });
 
@@ -76,7 +96,7 @@
 
     function StartTracking() {
         //Add a pushpin to show the user's location.
-        userPin = new Microsoft.Maps.Pushpin(map.getCenter(), { visible: false });
+        userPin = new Microsoft.Maps.Pushpin(map.getCenter(),{color : 'green', text:'A' ,title: 'Your Location'});
         map.entities.push(userPin);
 
         //Watch the users location.
