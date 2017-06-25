@@ -81,7 +81,14 @@ input[type=submit]:hover {
     <label for="lname">Car color</label>
     <input type="text" id="lname" name="lastname" placeholder="Your car color">
     <div align="center">
-<button type="button" class="btn btn-primary btn-md">Confirm Order</button>
+<button type="button" class="btn btn-primary btn-md" onclick="confirm()">Confirm Order
+<script type="text/javascript" charset="utf-8" async defer>
+  function confirm()
+  {
+    alert("Your order is on the way!");
+  }
+</script>
+</button>
 </div>
 </body>
 </html>
