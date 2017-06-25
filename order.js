@@ -47,7 +47,8 @@
         map.entities.push(pushpin);
         pushpin.setOptions({ enableHoverStyle: true, enableClickedStyle: true });
         var infoboxTemplate = '<div id="infoboxText" style="background-color:White; border-style:solid; border-width:medium; border-color:DarkOrange; min-height:100px; width: 240px; "><b id="infoboxTitle" style="position: absolute; top: 10px; left: 10px; width: 220px; ">{title}</b><b id="infoboxDescription" style="position: absolute; top: 30px; left: 10px; width: 220px; ">{description}</b><a id="infoboxDescription" style="text-align:center; position: absolute; top: 45px; width: 220px; " href="cart.html" >{handler}</a></div>';
-        var infobox = new Microsoft.Maps.Infobox(stall, {htmlContent:infoboxTemplate.replace('{title}', 'traff-O-lic').replace('{description}', 'check-out zone').replace('{handler}', 'Buy now'), actions: [{ label: 'Buy now', eventHandler: function () {
+        var infobox = new Microsoft.Maps.Infobox(stall, {htmlContent:infoboxTemplate.replace('{title}', 'traff-O-lic').replace('{description}', 'check-out zone').replace('{handler}', 'Buy now'), 
+            actions: [{ label: 'Buy now', eventHandler: function () {
                 location.href = 'menu.html';
             }
         }
