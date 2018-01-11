@@ -91,8 +91,27 @@
 
 <body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
 
+	
 <?php
-    $mysqli = new mysqli("localhost", "root", "", "Traffolic");
+ 
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "admindsk";
+ $db = "Traffolic";
+ 
+ 
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
 ?>
 
     <header> 
