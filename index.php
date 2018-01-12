@@ -91,28 +91,37 @@
 
 <body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
 
-	
 <?php
- 
-function OpenCon()
- {
- $dbhost = "localhost";
- $dbuser = "root";
- $dbpass = "admindsk";
- $db = "Traffolic";
- 
- 
- $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
- 
- 
- return $conn;
- }
- 
-function CloseCon($conn)
- {
- $conn -> close();
- }
+
+/*** mysql hostname ***/
+$hostname = 'localhost';
+
+/*** mysql username ***/
+$username = 'root';
+
+/*** mysql password ***/
+$password = 'admindsk';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
+    /*** echo a message saying we have connected ***/
+    echo 'Connected to database';
+    }
+catch(PDOException $e)
+    {
+    echo $e->getMessage();
+    }
 ?>
+<?php
+// Create connection
+$con=mysqli_connect('localhost','root','admindsk','traffolic'); 
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+?>	
 
     <header> 
 		<nav class="navbar navbar-default navbar-custom">
