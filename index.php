@@ -1,5 +1,35 @@
-<!DOCTYPE html>
+<?php
 
+/*** mysql hostname ***/
+$hostname = 'localhost';
+
+/*** mysql username ***/
+$username = 'root';
+
+/*** mysql password ***/
+$password = 'admindsk';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
+    /*** echo a message saying we have connected ***/
+    echo 'Connected to database';
+    }
+catch(PDOException $e)
+    {
+    echo $e->getMessage();
+    }
+?>
+<?php
+// Create connection
+$con=mysqli_connect('localhost','root','admindsk','traffolic'); 
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+?>	
+<!DOCTYPE html>
 <html>
 <head>
   
@@ -90,38 +120,6 @@
 </head>
 
 <body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
-
-<?php
-
-/*** mysql hostname ***/
-$hostname = 'localhost';
-
-/*** mysql username ***/
-$username = 'root';
-
-/*** mysql password ***/
-$password = 'admindsk';
-
-try {
-    $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
-    /*** echo a message saying we have connected ***/
-    echo 'Connected to database';
-    }
-catch(PDOException $e)
-    {
-    echo $e->getMessage();
-    }
-?>
-<?php
-// Create connection
-$con=mysqli_connect('localhost','root','admindsk','traffolic'); 
-
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-?>	
 
     <header> 
 		<nav class="navbar navbar-default navbar-custom">
