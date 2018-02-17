@@ -7,7 +7,7 @@ $hostname = 'localhost';
 $username = 'root';
 
 /*** mysql password ***/
-$password = 'admindsk';
+$password = '';
 
 try {
     $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
@@ -21,7 +21,7 @@ catch(PDOException $e)
 ?>
 <?php
 // Create connection
-$con=mysqli_connect('localhost','root','admindsk','traffolic'); 
+$con=mysqli_connect('localhost','root','','traffolic'); 
 
 // Check connection
 if (mysqli_connect_errno())
@@ -230,11 +230,11 @@ if (mysqli_connect_errno())
     <h1>About us, traff-O-lic</h1><br>
     <img src="logo.png" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
     <div class="w3-padding-32">
-        <h3><br>-> Instant food choices, focues on health and nutrition.</h3></div></div>
+        <h3><br> Instant food choices, focues on health and nutrition.</h3></div></div>
          <br> <p>Also serve with no min order..</p></br>
     <br> <p>Deliver water-bottles and other instant First-AID during emergencies</p></br>
-<br>-> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!</br>
-<br>-> Employ the youngsters with low educational backgrnd. (Solving the majour social problem)</br>
+<br> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!</br>
+<br> Employ the youngsters with low educational backgrnd. (Solving the majour social problem)</br>
  </br></h3>
 </div>
 </body>
