@@ -52,12 +52,12 @@ if (mysqli_connect_errno())
 	
  
       
-	.navbar-custom {
+.navbar-custom {
     color:#f4b41d;
     background-color: #f4b41d;
-	}
+}
 	
-	.locate
+.locate
 {	
   margin: auto;
 	position: relative}	
@@ -141,7 +141,7 @@ if (mysqli_connect_errno())
               <a href="register.php"><span class="glyphicon glyphicon-user"></span>Login</a>
             </li>
             <li>
-              <a href="#"><span class="glyphicon glyphicon-off"></span>Logout</a>
+              <a href="menu.html"><span class="glyphicon glyphicon-shopping-cart"></span>Menu</a>
             </li>
           </ul>
         </div>
@@ -176,24 +176,12 @@ if (mysqli_connect_errno())
         
       </div>
     </div>
-  
-          <?php
-         for($i=0; $i<3; $i++) {
-             echo("<h2>fooooood</h2>");
-         }
-        
-      ?>
+    
+      
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
       
-      <?php 
-        $image = 'sandwich.jpg';
-        echo "<div class='w3-quarter'>";
-            echo "<img src=$image alt='Sandwich' style='width:100%'/>";
-            echo "<h3>The Perfect Sandwich, A Real NYC Classic</h3>";
-        echo "</div>;"
-      ?>
      
    <div class="w3-quarter">
       <img src="sandwich.jpg" alt="Sandwich" style="width:100%">
@@ -244,13 +232,18 @@ if (mysqli_connect_errno())
   <div class="w3-container w3-padding-32 w3-center" id="about">  
     <h1>About us, traff-O-lic</h1><br>
     <img src="logo.png" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+         </div>
     <div class="w3-padding-32">
-        <h3><br> Instant food choices, focues on health and nutrition.</h3></div></div>
-         <br> <p>Also serve with no min order..</p></br>
-    <br> <p>Deliver water-bottles and other instant First-AID during emergencies</p></br>
-<br> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!</br>
-<br> Employ the youngsters with low educational backgrnd. (Solving the majour social problem)</br>
- </br></h3>
-</div>
+        <h3><br> Instant food choices, focues on health and nutrition.</h3>
+         </div>
+    
+    
+         <br> <p>Also serve with no min order..</p>
+
+    <br> <p>Deliver water-bottles and other instant First-AID during emergencies</p><br />
+<br> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!<br />
+<br> Employ the youngsters with low educational background. (Solving the major social problem)<br />
+ <br />
+    </div>
 </body>
 </html>
