@@ -137,9 +137,9 @@ if (mysqli_connect_errno())
           <li>
               <a href="#about"><span class="glyphicon glyphicon-bookmark"></span>About-us</a>
             </li>
-            <li>
+           <!-- <li>
               <a href="register.php"><span class="glyphicon glyphicon-user"></span>Login</a>
-            </li>
+            </li>-->
             <li>
               <a href="menu.html"><span class="glyphicon glyphicon-shopping-cart"></span>Menu</a>
             </li>
