@@ -163,7 +163,7 @@ if (mysqli_connect_errno())
     
 
      <div class="content">
-    <!--Main banner image-->
+   <!-- Main banner image-->
     <div class="banner_image">
       <div class="inner-banner-image">
         
@@ -176,74 +176,6 @@ if (mysqli_connect_errno())
         
       </div>
     </div>
-    
-      
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-      
-     
-   <div class="w3-quarter">
-      <img src="sandwich.jpg" alt="Sandwich" style="width:100%">
-    	 <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-     
-    </div>
-    <div class="w3-quarter">
-      <img src="rolls.jpg" alt="rolls" style="width:70%">
-      <h3>Let Me Tell You About This Rolls</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="sub.jpg" alt="subway" style="width:110%">
-      <h3>Satisfy your hunger with a footlong</h3>
-    
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="biscuits.jpg" alt="biscuits" style="width:80%">
-      <h3>Anytime is biscuits time</h3>
-     
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="water.png" alt="water" style="width:100%">
-      <h3>All u Need </h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="juice.jpg" alt="juice" style="width:105%">
-      <h3>Fruit-juices</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="fruits.jpg" alt="fruits" style="width:90%">
-      <h3>Cut-fruits</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="salad.jpg" alt="salad" style="width:100%">
-      <h3>Salads</h3>
-      
-    </div>
-  </div>
-  <div class="w3-container w3-padding-32 w3-center" id="about">  
-    <h1>About us, traff-O-lic</h1><br>
-    <img src="logo.png" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-         </div>
-    <div class="w3-padding-32">
-        <h3><br> Instant food choices, focues on health and nutrition.</h3>
-         </div>
-    
-    
-         <br> <p>Also serve with no min order..</p>
-
-    <br> <p>Deliver water-bottles and other instant First-AID during emergencies</p><br />
-<br> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!<br />
-<br> Employ the youngsters with low educational background. (Solving the major social problem)<br />
- <br />
-    </div>
 </body>
 </html>

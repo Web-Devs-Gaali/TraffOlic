@@ -35,7 +35,7 @@
 
 <body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
 <center><h1>Our Menu</h1></center>
-
+ <a href="payment" class="button"><h2>Checkout</h2></a>
 <?php
   if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
@@ -43,12 +43,10 @@ switch($_GET["action"]) {
     if(!empty($_POST["quantity"])) {
       $productByCode = mysqli_query($conn,"SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
       $row = mysqli_fetch_assoc($productByCode);
-      echo $row['code'].$row['name'].$row['code'].$_POST['quantity'];
       $itemArray = array($row["code"]=>array('name'=>$row["name"], 'code'=>$row["code"], 'quantity'=>$_POST["quantity"], 'price'=>$row["price"]));
       if(!empty($_SESSION["cart_item"])) {
         if(in_array($row["code"],array_keys($_SESSION["cart_item"]))) {
           foreach($_SESSION["cart_item"] as $k => $v) {
-              echo $row['code'].'\t'.$k;
               if($row["code"] == $k) {
                 if(empty($_SESSION["cart_item"][$k]["quantity"])) {
                   $_SESSION["cart_item"][$k]["quantity"] = 0;
@@ -103,7 +101,7 @@ if(isset($_SESSION["cart_item"])){
         <td style="text-align:left;border-bottom:#F0F0F0 1px solid;"><strong><?php echo $item["name"]; ?></strong></td>
         <td style="text-align:left;border-bottom:#F0F0F0 1px solid;"><?php echo $item["code"]; ?></td>
         <td style="text-align:right;border-bottom:#F0F0F0 1px solid;"><?php echo $item["quantity"]; ?></td>
-        <td style="text-align:right;border-bottom:#F0F0F0 1px solid;"><?php echo "$".$item["price"]; ?></td>
+        <td style="text-align:right;border-bottom:#F0F0F0 1px solid;"><?php echo "Rs".$item["price"]; ?></td>
         <td style="text-align:center;border-bottom:#F0F0F0 1px solid;"><a href="loggedmenu.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
         </tr>
         <?php
@@ -112,7 +110,7 @@ if(isset($_SESSION["cart_item"])){
     ?>
 
 <tr>
-<td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
+<td colspan="5" align=right><strong>Total:</strong> <?php echo "Rs".$item_total; ?></td>
 </tr>
 </tbody>
 </table>    
@@ -130,14 +128,15 @@ while($row = mysqli_fetch_assoc($product_array)) {
           <form method="post" action="loggedmenu.php?action=add&code=<?php echo $row['code'] ?>">
           <div class="product-image"><img style="max-width: 10vw; max-height: 10vh" src="menu_images/<?php echo $row["image"] ?>"></div><BR>
           <div><strong><?php echo $row["name"] ?></strong></div><BR>
-          <div class="product-price"><?php echo "$".$row["price"] ?></div><BR>
+          <div class="product-price"><?php echo "Rs.".$row["price"] ?></div><BR>
           <div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
           </form>
         </div>
     <?php 
   }
 ?>
-
+  </body>
+</html>
 <!--div class="w3-row-padding w3-padding-16 w3-center" id="food">
    <div class="w3-quarter">
    <a href="cart.html">   <img src="sandwich.jpg" alt="Sandwich" style="width:100%"></a>
@@ -185,5 +184,3 @@ while($row = mysqli_fetch_assoc($product_array)) {
       
     </div>
   </div-->
-  </body>
-</html>
