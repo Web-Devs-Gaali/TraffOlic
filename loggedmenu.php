@@ -22,10 +22,36 @@
   <!--Custom style sheet-->
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="menu_images/style.css">
-  <style>
-  h3:hover
+  
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+h3:hover
   {color:green;
   }
+    .form{
+       width: 500px;
+    height: 500px;
+    background-color: snow;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px
+    }
+     .header{
+        background-color: orangered;
+        column-rule-style: hidden;
+         text-align: center;
+    }
+    .bg{
+        background-image: url(form.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
   </style>
   <script src="js/script.js" type="text/javascript" charset="utf-8">
     
@@ -33,7 +59,7 @@
   </script>
 </head>
 
-<body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
+<body class="bg">
 <center><h1>Our Menu</h1></center>
 <div>
 <button type="button" class="btn btn-primary btn-md" onclick="confirm()">Confirm Order</button>
