@@ -171,7 +171,7 @@ if (mysqli_connect_errno())
             <h1>Food on the go</h1>
           
             <br/>
-            <a href="menu.html" class="button"><h2>Order Now</h2></a>
+            <a href="register.php" class="button"><h2>Order Now</h2></a>
           </div>
         
       </div>

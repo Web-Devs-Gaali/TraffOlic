@@ -126,10 +126,10 @@ while($row = mysqli_fetch_assoc($product_array)) {
   ?>
        <div class="product-item">
           <form method="post" action="loggedmenu.php?action=add&code=<?php echo $row['code'] ?>">
-          <div class="product-image"><img style="max-width: 10vw; max-height: 10vh" src="menu_images/<?php echo $row["image"] ?>"></div><BR>
+          <div class="product-image"><img style="max-width: 100%; max-height: 100%" src="menu_images/<?php echo $row["image"] ?>"></div><BR>
           <div><strong><?php echo $row["name"] ?></strong></div><BR>
           <div class="product-price"><?php echo "Rs.".$row["price"] ?></div><BR>
-          <div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
+          <div><input type="text" name="quantity" value="1" size="2" /><input onclick="https://imjo.in/6vwUbb" type="submit" value="Add to cart" class="btnAddAction" /></div>
           </form>
         </div>
     <?php 
