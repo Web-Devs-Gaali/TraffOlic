@@ -68,18 +68,19 @@ if (mysqli_connect_errno())
 }
 
 .content{
-    min-height: 600px;
+    align-content: center;
+     background-image: url(index1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .banner_image {
     padding-bottom: 50px;
     margin-bottom: 20px;
     font-family: "Karma", sans-serif;
-    color: #f8f8f8;
-   background-image: url(https://image.freepik.com/free-photo/raw-pasta-with-tomatoes-and-cheese-on-a-black-table-making-a-circle_1309-53.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
+    color: black;
+   
+
     text-shadow: 2px 4px 5px red;
 }
 
@@ -87,13 +88,17 @@ if (mysqli_connect_errno())
     padding-top: 12%;
     width:30%;
     margin:auto;
+    margin-top: auto;
 }
+      .nav{
+       background-color: #f4b41d;
+      }
 
 .banner_content {
    
     padding-top: 20%;
     padding-bottom: 10%;
-    overflow:hidden;
+    
     margin-bottom: 12%;
     background-color: rgba(0, 0, 0, 0);
     max-width: 660px;
@@ -119,9 +124,8 @@ if (mysqli_connect_errno())
   </script>
 </head>
 
-<body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
+<body style="background-blend-mode: color-dodge; background-color: #dfdfdf;" >
 
-    <header> 
 		<nav class="navbar navbar-default navbar-custom">
       		<div class="container-fluid" >
         		<div class="navbar-header">
@@ -135,7 +139,7 @@ if (mysqli_connect_errno())
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
           <li>
-              <a href="#about"><span class="glyphicon glyphicon-bookmark"></span>About-us</a>
+              <a href="about.html"><span class="glyphicon glyphicon-bookmark"></span>About-us</a>
             </li>
             <li>
               <a href="login.php"><span class="glyphicon glyphicon-user"></span>Login</a>
@@ -147,9 +151,8 @@ if (mysqli_connect_errno())
         </div>
       </div>
     </nav>
-    </header>
     <!--header ends-->
-    <div class="container-fluid" align="center">
+    <!--<div class="container-fluid" align="center">
       <button class="locate btn btn-primary" onclick="navigate()"><span class="glyphicon glyphicon-map-marker"></span>Locate me
         <script type="text/javascript" charset="utf-8">
     function navigate()
@@ -159,10 +162,10 @@ if (mysqli_connect_errno())
    
   </script>
       </button>
-    </div>
+    </div>-->
     
 
-     <div class="content">
+    <div class="content">
     <!--Main banner image-->
     <div class="banner_image">
       <div class="inner-banner-image">
@@ -171,79 +174,9 @@ if (mysqli_connect_errno())
             <h1>Food on the go</h1>
           
             <br/>
-            <a href="register.php" class="button"><h2>Order Now</h2></a>
-          </div>
-        
-      </div>
+            <a href="menu.html" class="button"><h2>Order Now</h2></a>
+          </div></div>
     </div>
-    
-      
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-      
-     
-   <div class="w3-quarter">
-      <img src="sandwich.jpg" alt="Sandwich" style="width:100%">
-    	 <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-     
-    </div>
-    <div class="w3-quarter">
-      <img src="rolls.jpg" alt="rolls" style="width:70%">
-      <h3>Let Me Tell You About This Rolls</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="sub.jpg" alt="subway" style="width:110%">
-      <h3>Satisfy your hunger with a footlong</h3>
-    
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="biscuits.jpg" alt="biscuits" style="width:80%">
-      <h3>Anytime is biscuits time</h3>
-     
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="water.png" alt="water" style="width:100%">
-      <h3>All u Need </h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="juice.jpg" alt="juice" style="width:105%">
-      <h3>Fruit-juices</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="fruits.jpg" alt="fruits" style="width:90%">
-      <h3>Cut-fruits</h3>
-      
-    </div>
-    <div class="w3-quarter">
-      <img src="salad.jpg" alt="salad" style="width:100%">
-      <h3>Salads</h3>
-      
-    </div>
-  </div>
-  <div class="w3-container w3-padding-32 w3-center" id="about">  
-    <h1>About us, traff-O-lic</h1><br>
-    <img src="logo.png" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-         </div>
-    <div class="w3-padding-32">
-        <h3><br> Instant food choices, focues on health and nutrition.</h3>
-         </div>
-    
-    
-         <br> <p>Also serve with no min order..</p>
-
-    <br> <p>Deliver water-bottles and other instant First-AID during emergencies</p><br />
-<br> We are here with a responsive User-friendly - website, with real-time geolocation and a best Menu.!<br />
-<br> Employ the youngsters with low educational background. (Solving the major social problem)<br />
- <br />
     </div>
 </body>
 </html>

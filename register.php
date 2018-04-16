@@ -4,8 +4,22 @@
 <head>
   <title>Registration system PHP and MySQL</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css"> .header{
+background-color: red;
+}
+.bod{
+background-image: url(login.jpg);
+background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+}
+.but{
+  max-width: 
+  color: red;
+}
+</style>
 </head>
-<body>
+<body class="bod">
   <div class="header">
   	<h2>Register</h2>
   </div>
@@ -29,9 +43,9 @@
   	  <input type="password" name="password_2">
   	</div>
   	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
-  	</div>
-  	<p>
+       <a href="form.php" class="button"><h2>Register</h2></a>        
+    </div>
+      	<p>
   		Already a member? <a href="login.php">Sign in</a>
   	</p>
   </form>
