@@ -35,7 +35,16 @@
 
 <body style="background-blend-mode: color-dodge; background-color: #dfdfdf">
 <center><h1>Our Menu</h1></center>
- <a href="payment" class="button"><h2>Checkout</h2></a>
+<div>
+<button type="button" class="btn btn-primary btn-md" onclick="confirm()">Confirm Order</button>
+<br><br>
+<script type="text/javascript" charset="utf-8" async defer>
+  function confirm()
+  {
+    alert("Your order is on the way!");
+  }
+</script>
+</div>
 <?php
   if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
