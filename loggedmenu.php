@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- https://hdwallsource.com/img/2014/7/solid-color-background-21964-22517-hd-wallpapers.jpg-->
   <?php
   session_start();
   $conn = mysqli_connect('localhost','root','','registration');
@@ -50,6 +51,7 @@ h3:hover
         background-image: url(form.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        align-content: center;
     }
 
   </style>
@@ -62,13 +64,14 @@ h3:hover
 <body class="bg">
 <center><h1>Our Menu</h1></center>
 <div>
-<button type="button" class="btn btn-primary btn-md" onclick="confirm()">Confirm Order</button>
+<button type="button" class="btn btn-primary btn-md" onclick="location.href = 'ordering.html'">Confirm Order</button>
 <br><br>
 <script type="text/javascript" charset="utf-8" async defer>
   function confirm()
   {
     alert("Your order is on the way!");
   }
+
 </script>
 </div>
 <?php

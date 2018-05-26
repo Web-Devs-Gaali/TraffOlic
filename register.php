@@ -4,11 +4,11 @@
 <head>
   <title>Registration system PHP and MySQL</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-<style type="text/css"> .header{
+  <style type="text/css"> .header{
 background-color: red;
 }
 .bod{
-background-image: url(login.jpg);
+background-image: url('login.jpg');
 background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -18,6 +18,7 @@ background-repeat: no-repeat;
   color: red;
 }
 </style>
+
 </head>
 <body class="bod">
   <div class="header">
@@ -43,9 +44,10 @@ background-repeat: no-repeat;
   	  <input type="password" name="password_2">
   	</div>
   	<div class="input-group">
-       <a href="form.php" class="button"><h2>Register</h2></a>        
-    </div>
-      	<p>
+  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	</div>
+    
+  	<p>
   		Already a member? <a href="login.php">Sign in</a>
   	</p>
   </form>
